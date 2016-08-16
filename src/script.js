@@ -4,4 +4,4 @@ import ItemContainer from './components/item-container';
 
 ReactDOM.render(<ItemContainer />, document.getElementById('item-container'));
 
-console.log('herro');
+// console.log('herro');
