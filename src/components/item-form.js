@@ -21,19 +21,17 @@ class ItemForm extends React.Component {
 
     // console.log(newItemName, newCert, newIssueDate, newRenewalDate, newAlertDate, newRenewalUrl, newLocation, newDocsNeeded);
 
-
     if (newItemName && newRenewalDate && newAlertDate) {
       this.props.addCert(newItemName, newCert, newIssueDate, newRenewalDate, newAlertDate, newRenewalUrl, newLocation, newDocsNeeded);
 
-      // this.props.addTask(newTask, newLocation, newLatLng);
-      // this.setState({
-      //   latLng: null
-      // });
-
-
       this.refs.newItemName.value = '';
+      this.refs.newCert.value = '';
+      this.refs.newIssueDate.value = '';
       this.refs.newRenewalDate.value = '';
       this.refs.newAlertDate.value = '';
+      this.refs.newRenewalUrl.value = '';
+      this.refs.newLocation.value = '';
+      this.refs.newDocsNeeded.value = '';
     }
     else {
       alert("You need to at least have a Name, Renewal Date, & Alert Date to add to your tracker.")
@@ -104,10 +102,6 @@ class ItemForm extends React.Component {
                     <input id="searchTextField" ref="newDocsNeeded" type="text" placeholder="DOCS Needed"/>
                 </div>
                 <input className="button" type="submit" value="Add to Tracker"/>
-
-
-
-
               </div>
             </form>
           </div>

@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var itemSchema = new mongoose.Schema({
-  // _id: {type: String, required: true }, //this is the id from the userSchema
+  userId: {type: String, required: true },
   itemName: { type: String, required: true },
   cert: String,
   issueDate: Date,

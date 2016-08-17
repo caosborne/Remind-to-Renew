@@ -29,12 +29,19 @@ router.get('/logout', function(req, res){
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
+    console.log(req.user);
     User.findOne({ auth_id: req.user.id }, function(err, user) {
       if (err) console.log(err);
       if (!user){
         var newUser = User({
           auth_id: req.user.id,
-          nickname: req.user.nickname
+          nickname: req.user.nickname,
+          givenName: req.user.name.givenName,
+          familyName: req.user.name.familyName,
+          picture: req.user.picture,
+          // gender: req.user.gender,
+          // name: req.user.name,
+          email: req.user.emails[0].value,
         });
         newUser.save(function(err, user){
           if (err) console.log(err);
@@ -44,11 +51,18 @@ router.get('/callback',
     });
   });
 
-router.post('/certs', function(req, res) {
+router.post('/certs', ensureLoggedIn, function(req, res) {
   var newItem = new Item(req.body)
+  newItem.userId = req.user.id
   newItem.save(function(err, item){
     if (err) console.log(err);
     res.json(item)
+  });
+});
+
+router.get('/items', function(req, res, next) {
+  Item.find({userId: req.user._id}, function(err, items){
+    res.json(items);
   });
 });
 
