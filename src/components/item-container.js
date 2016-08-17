@@ -23,22 +23,17 @@ class ItemContainer extends React.Component {
       location: location,
       docsNeeded: docsNeeded
     }
-    // this.setState({
-    //   newItemName: newItemName,
-    //   newCert: newCert,
-    //   newIssueDate: newIssueDate,
-    //   newRenewalDate: newRenewalDate,
-    //   newAlertDate: newAlertDate,
-    //   newRenewalUrl: newRenewalUrl,
-    //   newLocation: newLocation,
-    //   newDocsNeeded: newDocsNeeded
-    // });
-    let certs = this.state.certs;
-    certs.push(newCert);
-    this.setState({
-      certs: certs
-    })
-    console.log(this.state)
+    $.ajax({
+      url: '/certs',
+      method: 'POST',
+      data: newCert
+    }).done(function (data) {
+      let certs = this.state.certs;
+      certs.push(data);
+      this.setState({
+        certs: certs
+      })
+    }.bind(this));
   }
 
   render() {

@@ -16,12 +16,9 @@ class ItemTracker extends React.Component {
             <h3 className="panel-title">Renewable Items</h3>
           </div>
           <div className="panel-body">
-            {/* <Item itemName={cert.itemName} renewalDate={cert.renewalDate} alertDate={cert.alertDate} /> */}
 
-            { this.props.certs.map( (cert, id) => <Item key={id} itemName={cert.itemName} renewalDate={cert.renewalDate} alertDate={cert.alertDate} location={cert.location} id={id} />) }
+            { this.props.certs.map( (cert, id) => <Item key={id} itemName={cert.itemName} cert={cert.cert} issueDate={cert.issueDate} renewalDate={cert.renewalDate} alertDate={cert.alertDate} renewalUrl={cert.renewalUrl} location={cert.location} docsNeeded={cert.docsNeeded} id={id} />) }
 
-            {/* newRenewalDate.value = '';
-            this.refs.newAlertDate.value */}
           </div>
         </div>
       </div>

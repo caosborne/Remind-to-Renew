@@ -56,8 +56,8 @@ class ItemForm extends React.Component {
                   <label>ID/Cert #: </label>
                     <input id="searchTextField" ref="newCert" type="text" placeholder="ID/Cert #"/>
                 </div>
-                {/* <div className="row"> */}
-                <div class="container">
+                <div className="row">
+                {/* <div class="container">
                     <div class="row">
                         <div class='col-sm-6'>
                             <div class="form-group">
@@ -85,14 +85,14 @@ class ItemForm extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
-                  {/* <label>Issue Date: </label>
+                </div> */}
+                  <label>Issue Date: </label>
                     <input id="datepicker" ref="newIssueDate" type="text" placeholder="Issue Date"/>
                   <label>Renewal Date: </label>
                     <input id="datepicker2" ref="newRenewalDate" type="text" placeholder="Renewal Date"/>
                   <label>Alert Date: </label>
-                    <input id="datepicker3" ref="newAlertDate" type="text" placeholder="Alert Date"/> */}
-                {/* </div> */}
+                    <input id="datepicker3" ref="newAlertDate" type="text" placeholder="Alert Date"/>
+                </div>
                 <div className="row">
                   <label>Renewal URL: </label>
                     <input id="searchTextField" ref="newRenewalUrl" type="text" placeholder="Renewal URL"/>

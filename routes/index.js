@@ -3,6 +3,8 @@ var passport = require('passport');
 var router = express.Router();
 var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn();
 var User = require('../models/user');
+var Item = require('../models/item');
+
 
 var env = {
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
@@ -41,6 +43,14 @@ router.get('/callback',
       res.redirect(req.session.returnTo || '/');
     });
   });
+
+router.post('/certs', function(req, res) {
+  var newItem = new Item(req.body)
+  newItem.save(function(err, item){
+    if (err) console.log(err);
+    res.json(item)
+  });
+});
 
 
 module.exports = router;
