@@ -39,8 +39,6 @@ router.get('/callback',
           givenName: req.user.name.givenName,
           familyName: req.user.name.familyName,
           picture: req.user.picture,
-          // gender: req.user.gender,
-          // name: req.user.name,
           email: req.user.emails[0].value,
         });
         newUser.save(function(err, user){
@@ -62,6 +60,12 @@ router.post('/certs', ensureLoggedIn, function(req, res) {
 
 router.get('/items', function(req, res, next) {
   Item.find({userId: req.user._id}, function(err, items){
+    res.json(items);
+  });
+});
+
+router.get('/email', function(req, res, next) {
+  Item.find({givenName: req.user.givenName}, function(err, items){
     res.json(items);
   });
 });
