@@ -1,40 +1,26 @@
-// var email = require('some-email-lib'); //this needs to be emailJS
-var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
-// var sgTransport = require('nodemailer-sendgrid-transport');
 var User = require('../../models/user.js');
 var Item = require('../../models/item.js');
 
-// var options = {
-//     auth: {
-//         api_user: 'SENDGRID_USERNAME',
-//         api_key: 'SENDGRID_PASSWORD'
-//     }
-// }
-//
-//
-// var mailer = nodemailer.createTransport(sgTransport(options));
-// create reusable transporter object using the default SMTP transport
-// var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+// var sgTransport = require('nodemailer-sendgrid-transport');
 
-// var email = {
-//     to: '', // will be users email that is pulled after seeing they have an alert date
-//     from: 'remind2renew@tacos.com',
-//     subject: 'Hi there',
-//     text: 'Awesome sauce',
-//     html: '<b>Awesome sauce</b>'
-// };
-//
-// mailer.sendMail(email, function(err, res) {
-//     if (err) {
-//         console.log(err)
-//     }
-//     console.log(res);
-// });
-
-var transporter = nodemailer.createTransport(
-    smtpTransport('smtps://remind2renew@gmail.com:zxc453ZXC$%#@smtp.gmail.com')
+var transporter = nodemailer.createTransport({
+  service: 'Gmail',
+    auth: {
+      user: 'remind2renew@gmail.com',
+      pass: 'zxc453ZXC$%#'
+    }
+  }
 );
+
+transporter.verify(function(error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Server is ready to take our messages');
+  }
+});
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
@@ -45,32 +31,9 @@ var mailOptions = {
     // html: '<b>Hello world 🐴</b>' // html body
 };
 
-// send mail with defined transport object
-// transporter.sendMail(mailOptions, function(error, info){
-//     if(error){
-//         return console.log(error);
-//     }
-//     console.log('Message sent: ' + info.response);
-// });
-
-// $.ajax({
-//   url: '/email',
-//   method: "GET",
-//   dataType: "json"
-// })
-// .done(function(data){
-//   console.log(data)
-//   var itemData = {certs: data};
-// }.bind(this))
-//   .fail(function(error){
-//     console.log(error);
-//   })
-// }
-
-
 module.exports = function(agenda) {
   agenda.define('reminder email', function(job) {
-    // console.log(itemData);
+    console.log(User);
     transporter.sendMail(mailOptions, function(error, info){
         if(error){
             return console.log(error);
