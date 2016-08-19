@@ -51,10 +51,10 @@ Monday morning I forked the template then removed Git and created my own repo. I
 ![ ERD ](img/IMG_6205.JPG)
 
 #### Wireframe
-![ wireframe ](img/IMG_6207.JPG)
+![ wireframe ](img/container.jpg)
 
 #### WF-Profile
-![ wireframe profile ](img/IMG_6208.JPG)
+![ wireframe profile ](img/profile.jpg)
 
 #### WF-Form
 ![ wireframe form ](img/IMG_6209.JPG)
