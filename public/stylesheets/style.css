@@ -1,7 +1,38 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Exo', "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*text-align: center;*/
 }
+
+#login-page {
+  font: 14px 'Exo', "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+#login-page h1 {
+  font-size: 6em;
+  padding-bottom: 2%;
+}
+
+h2 {
+  font-size: 6em;
+  /*padding-bottom: 2%;*/
+}
+.panel {
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: left;
+}
+
+.panel-title {
+  font-size: 2em;
+  text-align: center;
+}
+.profile {
+  text-align: center;
+}
+/*#tracker {
+  max-height: 50%;
+}*/
 
 a {
   color: #00B7FF;

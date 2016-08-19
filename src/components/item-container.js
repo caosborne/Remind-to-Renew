@@ -58,10 +58,14 @@ class ItemContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <Profile />
-        <ItemForm addCert={this._addCert.bind(this)} />
-        <ItemTracker certs={this.state.certs} />
+      <div className="container">
+        <div className="row">
+          <Profile />
+        </div>
+        {/* <div className="row"> */}
+          <ItemTracker certs={this.state.certs} />
+          <ItemForm addCert={this._addCert.bind(this)} />
+        {/* </div> */}
       </div>
     );
   }

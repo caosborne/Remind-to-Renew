@@ -29,7 +29,7 @@ router.get('/logout', function(req, res){
 router.get('/callback',
   passport.authenticate('auth0', { failureRedirect: '/url-if-something-fails' }),
   function(req, res) {
-    console.log(req.user);
+    // console.log(req.user);
     User.findOne({ auth_id: req.user.id }, function(err, user) {
       if (err) console.log(err);
       if (!user){

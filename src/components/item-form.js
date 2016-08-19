@@ -40,75 +40,119 @@ class ItemForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="panel panel-default">
-          <div className="panel-heading">
-            <h3 className="panel-title">Cert/License/ID/ or anything that needs to be renewed.</h3>
-          </div>
-          <div className="panel-body newTaskInput">
-            <form onSubmit={this._handleSubmit.bind(this)} >
-              <div className="containter">
-                <div className="row">
-                  <label>Item Name: </label>
-                    <input ref="newItemName" type="text" placeholder="Item Name"/>
-                  <label>ID/Cert #: </label>
-                    <input id="searchTextField" ref="newCert" type="text" placeholder="ID/Cert #"/>
-                </div>
-                <div className="row">
-                {/* <div class="container">
-                    <div class="row">
-                        <div class='col-sm-6'>
-                            <div class="form-group">
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <label>Issue Date: </label>
-                                    <input type='text' class="form-control" ref="newIssueDate" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <label>Renewal Date: </label>
-                                    <input type='text' class="form-control" ref="newRenewalDate" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <label>Alert Date: </label>
-                                    <input type='text' class="form-control" ref="newAlertDate" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-                  <label>Issue Date: </label>
-                    <input id="datepicker" ref="newIssueDate" type="text" placeholder="Issue Date"/>
-                  <label>Renewal Date: </label>
-                    <input id="datepicker2" ref="newRenewalDate" type="text" placeholder="Renewal Date"/>
-                  <label>Alert Date: </label>
-                    <input id="datepicker3" ref="newAlertDate" type="text" placeholder="Alert Date"/>
-                </div>
-                <div className="row">
-                  <label>Renewal URL: </label>
-                    <input id="searchTextField" ref="newRenewalUrl" type="text" placeholder="Renewal URL"/>
-                  <label>Location to Renew: </label>
-                    <input id="searchTextField" ref="newLocation" type="text" placeholder="Location"/>
-                </div>
-                <div className="row">
-                  <label>Docs Needed for Renewal: </label>
-                    <input id="searchTextField" ref="newDocsNeeded" type="text" placeholder="DOCS Needed"/>
-                </div>
-                <input className="button" type="submit" value="Add to Tracker"/>
+      // <div>
+      //   <div className="panel panel-default">
+      //     <div className="panel-heading">
+      //       <h3 className="panel-title">Cert/License/ID/ or anything that needs to be renewed.</h3>
+      //     </div>
+      //     <div className="panel-body newTaskInput">
+      //       <form onSubmit={this._handleSubmit.bind(this)} >
+      //         <div className="containter">
+      //           <div className="row">
+      //             <label>Item Name: </label>
+      //               <input ref="newItemName" type="text" placeholder="Item Name"/>
+      //             <label>ID/Cert #: </label>
+      //               <input id="searchTextField" ref="newCert" type="text" placeholder="ID/Cert #"/>
+      //           </div>
+      //           <div className="row">
+      //              <label>Issue Date: </label>
+      //               <input id="datepicker" ref="newIssueDate" type="text" placeholder="Issue Date"/>
+      //              <label>Renewal Date: </label>
+      //                <input id="datepicker2" ref="newRenewalDate" type="text" placeholder="Renewal Date"/>
+      //              <label>Alert Date: </label>
+      //                <input id="datepicker3" ref="newAlertDate" type="text" placeholder="Alert Date"/>
+      //            </div>
+      //            <div className="row">
+      //              <label>Renewal URL: </label>
+      //                <input id="searchTextField" ref="newRenewalUrl" type="text" placeholder="Renewal URL"/>
+      //              <label>Location to Renew: </label>
+      //                <input id="searchTextField" ref="newLocation" type="text" placeholder="Location"/>
+      //            </div>
+      //            <div className="row">
+      //              <label>Docs Needed for Renewal: </label>
+      //                <input id="searchTextField" ref="newDocsNeeded" type="text" placeholder="DOCS Needed"/>
+      //            </div>
+      //            <input className="button" type="submit" value="Add to Tracker"/>
+      //          </div>
+      //        </form>
+      //      </div>
+      //    </div>
+      //  </div>
+
+      <div className="panel panel-primary col-md-offset-6">
+        <div className="panel-heading">
+          <h2 className="panel-title text-warning">Cert/License/ID</h2>
+        </div>
+        <div className="panel-body">
+        <form className="form-horizontal" onSubmit={this._handleSubmit.bind(this)} >
+          {/* <fieldset> */}
+            {/* <legend>Cert/License/ID/ or anything that needs to be renewed.</legend> */}
+            <div className="form-group">
+              <label for="inputItem" className="col-lg-2 control-label text-warning">Item Name</label>
+              <div className="col-md-10">
+                <input ref="newItemName" type="text" className="form-control" id="inputItem" placeholder="Item Name" />
               </div>
-            </form>
-          </div>
+            </div>
+            <div className="form-group">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">ID/Cert #</label>
+              <div className="col-lg-10">
+                <input ref="newCert" type="text" className="form-control" id="searchTextField" placeholder="ID/Cert #" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">Issue Date</label>
+              <div className="col-lg-10">
+                <input ref="newIssueDate" type="text" className="form-control" id="datepicker" placeholder="Issue Date" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">Renewal Date</label>
+              <div className="col-lg-10">
+                <input ref="newRenewalDate" type="text" className="form-control" id="datepicker2" placeholder="Renewal Date" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">Alert Date</label>
+              <div className="col-lg-10">
+                <input ref="newAlertDate" type="text" className="form-control" id="datepicker3" placeholder="Alert Date" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">Renewal URL</label>
+              <div className="col-lg-10">
+                <input ref="newRenewalUrl" type="text" className="form-control" id="" placeholder="Renewal URL" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">Location to Renew</label>
+              <div className="col-lg-10">
+                <input ref="newLocation" type="text" className="form-control" id="" placeholder="Location" />
+              </div>
+            </div>
+            <div className="form-group">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">Docs Needed for Renewal</label>
+              <div className="col-lg-10">
+                <input ref="newDocsNeeded" type="text" className="form-control" id="searchTextField" placeholder="DOCS Needed" />
+              </div>
+            </div>
+
+
+            <div className="form-group">
+              <div className="col-lg-10 col-lg-offset-2">
+                <input className="button btn btn-primary" type="submit" value="Add to Tracker"/>
+              </div>
+            </div>
+          {/* </fieldset> */}
+        </form>
+
         </div>
       </div>
-    );
-  }
-}
+
+
+
+
+     );
+   }
+ }
 
 export default ItemForm;
