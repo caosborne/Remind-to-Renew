@@ -1,6 +1,6 @@
-# Auth0 + NodeJS Seed
-#Running the example
-In order to run the example you need to have npm and NodeJS installed.
+# Remind 2 Renew (Final Project)
+##The App
+This app allows users to add items to a tracker that they need to renew or be reminded about. When a user adds an item to their tracker, a item is created that sets an alert date that is chosen and on the alert date an email will be sent to the user. The user can provide all information needed to make the renew process easier for them when the time comes.
 
 Now, run `npm install` to install the dependencies.
 
