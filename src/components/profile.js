@@ -28,12 +28,12 @@ class Profile extends React.Component {
 
       <div className="panel panel-primary col-md-12">
         <div className="panel-heading">
-          <h1 className="panel-title text-warning">Remind 2 Renew</h1>
+          <h1 className="panel-title text-warning">Remind <span className="text-success">2</span> Renew</h1>
         </div>
         <div className="panel-body profile">
           <img src={this.props.picture}></img>
-          <h3 className="text-warning">Hello, {this.props.givenName}</h3>
-          <p className="text-warning">You currently have {this.props.NumberOfCertsAlertedToBeRenewed}<span className="text-success">0</span> items that need to be renewed!</p>
+          <h3 className="text-warning">Hello, Christopher{this.props.givenName}</h3>
+          <p className="text-warning">You currently have {this.props.NumberOfCertsAlertedToBeRenewed}<span className="text-success number-alerts">0</span> items that need to be renewed!</p>
         </div>
       </div>
     );

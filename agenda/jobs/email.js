@@ -24,7 +24,7 @@ transporter.verify(function(error, success) {
 
 var mailOptions = {
     from: "remind2renew@gmail.com", // sender address
-    to:  "chris.a.osborne@gmail.com",// will be users email that is pulled after seeing they have an alert date
+    to:  "remind2renew@gmail.com",// will be users email that is pulled after seeing they have an alert date
     subject: 'Friendly reminder that you have an Item that needs to be renewed!', // Subject line
     text: "Warning: You're approaching your renew time. Make sure you renew your items. You have selected an alert date to remind yourself about a current item that needs to be renewed. Make sure you renew any items you may have coming up and update them in the tracker. Thanks for choosing Remind 2 Renew." , // plaintext body
 };

@@ -30,6 +30,26 @@ h2 {
 .profile {
   text-align: center;
 }
+.col-lg-10 {
+  margin-bottom: 40px;
+}
+.login-button, .tracker-button {
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.number-alerts {
+  font-weight: bold;
+}
+p {
+  font-size: 1.3em;
+}
+.cert-title, .dash {
+  font-weight: bold;
+}
+.dash {
+  font-size: 1.4em;
+}
 /*#tracker {
   max-height: 50%;
 }*/

@@ -84,62 +84,62 @@ class ItemForm extends React.Component {
           <h2 className="panel-title text-warning">Cert/License/ID</h2>
         </div>
         <div className="panel-body">
-        <form className="form-horizontal" onSubmit={this._handleSubmit.bind(this)} >
+        <form className="" onSubmit={this._handleSubmit.bind(this)} >
           {/* <fieldset> */}
             {/* <legend>Cert/License/ID/ or anything that needs to be renewed.</legend> */}
-            <div className="form-group">
+            <div className="">
               <label for="inputItem" className="col-lg-2 control-label text-warning">Item Name</label>
-              <div className="col-md-10">
+              <div className="col-lg-10">
                 <input ref="newItemName" type="text" className="form-control" id="inputItem" placeholder="Item Name" />
               </div>
             </div>
-            <div className="form-group">
+            <div className="">
               <label for="inputCert" className="col-lg-2 control-label text-warning">ID/Cert #</label>
               <div className="col-lg-10">
                 <input ref="newCert" type="text" className="form-control" id="searchTextField" placeholder="ID/Cert #" />
               </div>
             </div>
-            <div className="form-group">
+            <div className="">
               <label for="inputCert" className="col-lg-2 control-label text-warning">Issue Date</label>
               <div className="col-lg-10">
                 <input ref="newIssueDate" type="text" className="form-control" id="datepicker" placeholder="Issue Date" />
               </div>
             </div>
-            <div className="form-group">
+            <div className="">
               <label for="inputCert" className="col-lg-2 control-label text-warning">Renewal Date</label>
               <div className="col-lg-10">
                 <input ref="newRenewalDate" type="text" className="form-control" id="datepicker2" placeholder="Renewal Date" />
               </div>
             </div>
-            <div className="form-group">
+            <div className="">
               <label for="inputCert" className="col-lg-2 control-label text-warning">Alert Date</label>
               <div className="col-lg-10">
                 <input ref="newAlertDate" type="text" className="form-control" id="datepicker3" placeholder="Alert Date" />
               </div>
             </div>
-            <div className="form-group">
+            <div className="">
               <label for="inputCert" className="col-lg-2 control-label text-warning">Renewal URL</label>
               <div className="col-lg-10">
                 <input ref="newRenewalUrl" type="text" className="form-control" id="" placeholder="Renewal URL" />
               </div>
             </div>
-            <div className="form-group">
+            <div className="">
               <label for="inputCert" className="col-lg-2 control-label text-warning">Location to Renew</label>
               <div className="col-lg-10">
                 <input ref="newLocation" type="text" className="form-control" id="" placeholder="Location" />
               </div>
             </div>
-            <div className="form-group">
-              <label for="inputCert" className="col-lg-2 control-label text-warning">Docs Needed for Renewal</label>
+            <div className="">
+              <label for="inputCert" className="col-lg-2 control-label text-warning">Docs Needed</label>
               <div className="col-lg-10">
                 <input ref="newDocsNeeded" type="text" className="form-control" id="searchTextField" placeholder="DOCS Needed" />
               </div>
             </div>
 
 
-            <div className="form-group">
+            <div className="">
               <div className="col-lg-10 col-lg-offset-2">
-                <input className="button btn btn-primary" type="submit" value="Add to Tracker"/>
+                <input className="button btn btn-primary text-warning tracker-button" type="submit" value="Add to Tracker"/>
               </div>
             </div>
           {/* </fieldset> */}
