@@ -14,7 +14,7 @@ var env = {
 
 router.get('/', ensureLoggedIn, function(req, res, next) {
   // console.log(req.user);
-  console.log(ensureLoggedIn);
+  console.log("I am logged in");
   res.render('index', { title: 'Express', env: env, user: req.user });
 });
 
