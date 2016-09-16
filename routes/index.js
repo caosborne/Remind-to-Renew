@@ -13,7 +13,8 @@ var env = {
 };
 
 router.get('/', ensureLoggedIn, function(req, res, next) {
-  console.log(req.user);
+  // console.log(req.user);
+  console.log(ensureLoggedIn);
   res.render('index', { title: 'Express', env: env, user: req.user });
 });
 
