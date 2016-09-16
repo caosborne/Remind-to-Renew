@@ -11,7 +11,7 @@ var Auth0Strategy = require('passport-auth0');
 var mongoose = require('mongoose');
 var User = require('./models/user');
 
-dotenv.load();
+dotenv.config();
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_CONNECT);
