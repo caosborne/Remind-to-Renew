@@ -43,9 +43,11 @@ router.get('/callback',
         });
         newUser.save(function(err, user){
           if (err) console.log(err);
+          res.redirect(req.session.returnTo || '/');
         });
+      } else {
+        res.redirect('/')
       }
-      res.redirect(req.session.returnTo || '/');
     });
   });
 
