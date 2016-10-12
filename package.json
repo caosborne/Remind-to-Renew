@@ -25,6 +25,8 @@
     "ejs": "^2.5.1",
     "express": "~4.13.1",
     "express-session": "^1.11.3",
+    "google-auth-library": "^0.9.8",
+    "googleapis": "^14.0.0",
     "jade": "~1.11.0",
     "mongoose": "^4.5.8",
     "morgan": "~1.6.1",

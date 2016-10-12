@@ -51,8 +51,8 @@ module.exports = function(agenda) {
 
   // console.log(db.collection.find({ "alertDate": { "$gte":"2016-08-18T05:00:00Z", "$lt":"2016-08-29T05:00:00Z" } }));
 
-  // agenda.define('reminder email', function(job) {
-  //   // console.log(User.find({ "alertDate": { "$gte":ISODate("2016-08-18T05:00:00Z"), "$lt": ISODate("2016-08-29T05:00:00Z") } }));
+  agenda.define('reminder email', function(job) { console.log('test');});
+    // console.log(User.find({ "alertDate": { "$gte":ISODate("2016-08-18T05:00:00Z"), "$lt": ISODate("2016-08-29T05:00:00Z") } }));
   //
   //
   //   // query database for items.alertDate for any alerts set for the next 12 hours and they haven't already been sent(5 minutes)

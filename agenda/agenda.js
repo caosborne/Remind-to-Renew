@@ -11,7 +11,9 @@ var agenda = new Agenda({
 var email = require('./jobs/email')(agenda);
 
 agenda.on('ready', function() {
-    agenda.schedule('in 10 seconds', 'reminder email');
+    var job = agenda.schedule('in 10 seconds', 'reminder email');
+    job.repeatEvery('1 second');
+    job.save();
     agenda.start();
 });
 
